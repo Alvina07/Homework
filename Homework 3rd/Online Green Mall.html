@@ -1,0 +1,133 @@
+<title>Online Green Mall</title>
+<script>
+
+let greeting = confirm('Welcome to our Online Green Mall. For proceeding to our product list press OK.');
+if (greeting==true) 
+{
+	let productList=+prompt('Choose the product category you want to navigate: 1. Dresses, 2. Accessories, 3. Shoes');
+	if (productList===1) 
+	{
+		let dresses=+prompt('Choose one of the dresses shown below: 1. Red Dress-80000 AMD, 2.Blue Dress-115000 AMD');
+		if (dresses===1) {
+			let proceedToPayment=+prompt('Choose the payment method: 1. By Cash, 2. By Bank Card.');
+			let payment=+prompt('Please, enter the value of the product-80000 AMD.');
+			if ((proceedToPayment===1 || proceedToPayment===2) && payment>100000) {
+					document.write(`Thank you for shopping with us. You receive a discount of 30%. The price after discount is ${payment*0.7} AMD. Your receipt is: Red Dress-${payment*0.7} AMD.`);
+				}
+				else if (proceedToPayment===2 && payment<=100000) {
+					discount=payment*0.95
+					document.write(`Thank you for shopping with us. You receive a discount of 5%. The price after discount is ${discount}AMD. Your receipt is: Red Dress-${discount}AMD.`);
+				}
+				else {
+					document.write(`Thank you for shopping with us. Your receipt is: Red Dress-${payment} AMD.`);
+				}
+			}
+		
+	
+		else if(dresses===2) 
+		{
+			let proceedToPayment=+prompt('Choose the payment method: 1. By Cash, 2. By Bank Card.');
+			let payment=+prompt('Please, enter the value of the product-115000 AMD.');
+			if ((proceedToPayment===1 || proceedToPayment===2) && payment>100000) 
+			{
+				let discount=payment*0.7;
+					document.write(`Thank you for shopping with us. You receive a discount of 30%. The price after discount is ${discount}AMD. Your receipt is: Blue Dress-${discount}AMD.`);
+			}
+				else if (proceedToPayment===2 && payment<=100000) 
+				{
+					discount=payment*0.95
+					document.write(`Thank you for shopping with us. You receive a discount of 5%. The price after discount is ${discount}AMD. Your receipt is: Blue Dress-${discount}AMD.`);
+				}
+				else 
+				{
+					document.write(`Thank you for shopping with us. Your receipt is: Blue Dress-${payment}AMD.`);
+				}
+		}
+		else {
+			alert("Wrong number enetered. Please, try again.");
+		}
+	}
+	
+			
+	else if (productList===2) 
+	{
+		let accessories=+prompt('Choose one of the accessories shown below: 1. Eco Handbag-102000 AMD, 2.Sunglasses-74500 AMD');
+		if (accessories===1) {
+			let proceedToPayment=+prompt('Choose the payment method: 1. By Cash, 2. By Bank Card.');
+			let payment=+prompt('Please, enter the value of the product-102000 AMD.');
+			if ((proceedToPayment===1 || proceedToPayment===2) && payment>100000) {
+				document.write(`Thank you for shopping with us. You receive a discount of 30%. The price after discount is ${payment*0.7} AMD. Your receipt is: Eco Handbag-${payment*0.7} AMD.`);
+				}
+				else if (proceedToPayment===2 && payment<=100000) {
+					discount=payment*0.95;
+					document.write(`Thank you for shopping with us. You receive a discount of 5%. The price after discount is ${discount} AMD. Your receipt is: Eco Handbag-${discount} AMD.`);
+				}
+				else {
+					document.write(`Thank you for shopping with us. Your receipt is: Eco Handbag-${payment} AMD.`);
+				}
+			}
+		
+
+		else if(accessories===2) {
+			let proceedToPayment=+prompt('Choose the payment method: 1. By Cash, 2. By Bank Card.');
+			let payment=+prompt('Please, enter the value of the product-74500 AMD.');
+			if ((proceedToPayment===1 || proceedToPayment===2) && payment>100000) {
+				document.write(`Thank you for shopping with us. You receive a discount of 30%. The price after discount is ${payment*0.7} AMD. Your receipt is: Sunglasses-${payment*0.7} AMD.`);
+				}
+				else if (proceedToPayment===2 && payment<=100000) {
+					discount=payment*0.95;
+					document.write(`Thank you for shopping with us. You receive a discount of 5%. The price after discount is ${discount} AMD. Your receipt is: Sunglasses-${discount} AMD.`);
+				}
+				else {
+					document.write(`Thank you for shopping with us. Your receipt is: Sunglasses-${payment} AMD.`);
+				}
+		}
+			else {
+			alert("Wrong number enetered. Please, try again.");
+		}
+	}
+	
+
+	else if (productList===3) {
+		let shoes=+prompt('Choose one of the shoes shown below: 1. High heels-95000 AMD, 2.Sneakers-124000 AMD');
+		if (shoes===1) {
+			let proceedToPayment=+prompt('Choose the payment method: 1. By Cash, 2. By Bank Card.');
+			let payment=+prompt('Please, enter the value of the product-95000 AMD.');
+			if ((proceedToPayment===1 || proceedToPayment===2) && payment>100000) {
+					document.write(`Thank you for shopping with us. You receive a discount of 30%. The price after discount is ${payment*0.7} AMD. Your receipt is: High Heels-${payment*0.7} AMD.`);
+				}
+				
+				else if ((proceedToPayment===2 || proceedToPayment===1) && payment<=100000) {
+					document.write(`Thank you for shopping with us. You receive a discount of 10%. The price after discount is ${payment*0.9} AMD. Your receipt is: High Heels-${payment*0.9} AMD.`);
+				}
+				
+			}
+
+		else if(shoes===2) {
+			let proceedToPayment=+prompt('Choose the payment method: 1. By Cash, 2. By Bank Card.');
+			let payment=+prompt('Please, enter the value of the product-124000 AMD.');
+			if ((proceedToPayment===1 || proceedToPayment===2) && payment>100000) {
+					document.write(`Thank you for shopping with us. You receive a discount of 30%. The price after discount is ${payment*0.7} AMD. Your receipt is: Sneakers-${payment*0.7} AMD.`);
+				}
+				
+				else if ((proceedToPayment===2 || proceedToPayment===1) && payment<=100000) {
+					document.write(`Thank you for shopping with us. You receive a discount of 10%. The price after discount is ${payment*0.9} AMD. Your receipt is: Sneakers-${payment*0.9} AMD.`);
+				}
+				
+			}
+			else {
+			alert("Wrong number enetered. Please, try again.");
+		}
+	}
+	else {
+			alert("Wrong number enetered. Please, try again.");
+		}
+}
+
+
+else {
+
+	alert("We are sorry you're leaving our page.");
+}
+
+</script>

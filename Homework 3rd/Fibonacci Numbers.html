@@ -1,0 +1,17 @@
+<title> Fibonacci Numbers </title>
+<script>
+
+let number1 = +prompt('Enter a number:');
+let numberSet=0;
+let fibonacci1=0;
+let fibonacci2=1;
+while (numberSet < number1){
+numberSet=fibonacci1+fibonacci2
+fibonacci1=fibonacci2;
+fibonacci2=numberSet;
+document.write(numberSet+ '<br>');
+}
+
+</script>
+
+
