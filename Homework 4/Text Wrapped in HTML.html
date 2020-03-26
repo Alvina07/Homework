@@ -1,0 +1,12 @@
+<script>
+
+function textToHtml(text, htmlTag) {
+const finalText=`<${htmlTag}> ${text} </${htmlTag}>`;
+return finalText;
+}
+let text=prompt('Enter your text.');
+let tag=prompt('Enter your tag.');
+
+alert(textToHtml(text, tag));
+
+</script>

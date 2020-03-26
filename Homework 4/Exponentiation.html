@@ -1,0 +1,15 @@
+<script>
+
+function numberPower(number,power)
+{
+let result=1;
+for (let i=1; i<=power; i++) {
+	result*=number;
+}
+return result;
+}
+let number=+prompt('Enter the number:');
+let power=+prompt('Enter the power:')
+console.log(numberPower(number, power));
+
+</script>
