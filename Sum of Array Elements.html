@@ -1,0 +1,20 @@
+<script>
+	function printArray(){
+	let arraySize = +prompt('Enter your array length: ');
+	let myArray = [arraySize];
+	for(let i=0; i<arraySize; i++) {
+	
+	myArray[i] = +prompt('Enter your array elements ');
+	}
+	return myArray;
+	}
+
+	let myArray=(printArray());
+
+	let sumOfElements=0;
+	for(let i=0; i<myArray.length; i++){
+	sumOfElements+=myArray[i];
+	}
+	document.write(`Sum of the array elements equals ${sumOfElements}.`)
+
+</script>
