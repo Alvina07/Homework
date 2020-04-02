@@ -1,0 +1,124 @@
+<title>Vending Machine</title>
+<script>
+
+	let vendingMachine = {
+    drinksAndSweets: [
+        {
+            name: 'Ice Coffee',
+            price: 150,
+            quantity: 7,
+            productCode:'d1',
+        },
+        {
+            name: 'Sprite',
+            price: 300,
+            quantity: 2,
+            productCode:'d2',
+        },
+        {
+            name: 'Fanta',
+            price: 250,
+            quantity: 6,
+            productCode:'d3',
+        },
+        {
+            name: 'Mineral Water',
+            price: 200,
+            quantity: 0,
+            productCode:'d4',
+        },
+        {
+            name: 'Bounty',
+            price: 280,
+            quantity: 4,
+            productCode:'s1',
+        },
+        {
+            name: 'Snickers',
+            price: 310,
+            quantity: 9,
+            productCode:'s2',
+        },
+        {
+            name: 'Cookie',
+            price: 170,
+            quantity: 0,
+            productCode:'s3',
+        },
+        {
+            name: 'Wafer',
+            price: 220,
+            quantity: 2,
+            productCode:'s4',
+        },
+    ]
+};
+
+
+
+let productType;
+let productChosen;
+let moneyInserted; 
+let addingProduct;
+let addedAmount;
+let startingMachine;
+
+	startingMachine = +prompt('For buying option, please press-1, for adding product option, please, enter-2.');			
+	if (startingMachine ===1) {
+									
+	productType = prompt(listOfProducts(vendingMachine));
+	moneyInserted = +prompt('Please, pay for the product.');
+												
+	for(let i=0;i<vendingMachine.drinksAndSweets.length;i++) {
+	if (vendingMachine.drinksAndSweets[i].productCode === productType) {
+	productChosen = vendingMachine.drinksAndSweets[i];
+	break;
+	}
+	}
+	if (productChosen.quantity === 0) {
+	alert(`Sorry, we do not have ${productChosen.name}. Choose another product.`);
+	} 
+	else if (moneyInserted<productChosen.price){
+		alert(`You have not inserted enough money. The price of the ${productChosen.name} is ${productChosen.price}.`)
+	}
+	else {
+	alert(`Take your order  ${productChosen.name}. Your exchange is ${moneyInserted - productChosen.price} AMD. Enjoy!`);
+		}
+		prompt('For buying option, please press-1, for adding product option, please, enter-2.');
+	}
+
+else if (startingMachine ===2){
+	productType = prompt(listOfProducts(vendingMachine));
+	addedAmount=+prompt('Please, enter how many products you want to add.');
+	for(let i=0;i<vendingMachine.drinksAndSweets.length;i++) {
+		if (vendingMachine.drinksAndSweets[i].productCode === productType) {
+		productChosen=vendingMachine.drinksAndSweets[i];											        
+		break;
+		}
+	}
+	alert(`Product is added. ${productChosen.name} is now ${productChosen.quantity+addedAmount}.`);
+	prompt('For buying option, please press-1, for adding product option, please, enter-2.');
+}
+
+
+else{
+
+	alert ('Wrong number entered. Please, try again.');
+	prompt('For buying option, please press-1, for adding product option, please, enter-2.');
+}
+
+function listOfProducts(vendingMachine) {
+    let productInfo = '';
+    for (let i=0; i< vendingMachine.drinksAndSweets.length; i++) {
+        productInfo += vendingMachine.drinksAndSweets[i].name;
+        productInfo += ' -' + vendingMachine.drinksAndSweets[i].price + ' -'+ vendingMachine.drinksAndSweets[i].productCode + ' ,';
+    }
+    return productInfo;
+}
+
+</script>
+         
+      <table>
+   </body>
+
+</html>
