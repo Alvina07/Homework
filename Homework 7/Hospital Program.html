@@ -1,0 +1,111 @@
+<title> Hospital Program </title>
+<script>
+
+let login = [
+    {
+        username:'Samuel',
+        pass: '0101',
+    },
+    {
+        username:'Susan',
+        pass: '0202',
+    },
+    {
+        username:'Gary',
+        pass: '0303',
+    },
+    {
+        username:'Lisa',
+        pass: '0404',
+    },
+
+];
+
+let patientInfo = [
+    {
+        name:'Samuel',
+        illness:'Arthritis',
+    },
+    {
+        name:'Susan',
+        illness:'Asthma',
+    },
+    {
+        name:'Gary',
+        illness:'Bronchitis',
+    },
+	{
+        name:'Lisa',
+        illness:'Diabetes',
+    },
+];
+
+let illness = [
+    {
+        name:'Arthritis',
+        symptomes:['joint pain', 'muscle wasting', 'restricted movement'],
+        treatment: ['corticosteroids', 'painkillers'],
+    },
+
+    {
+        name:'Asthma',
+        symptomes:['wheezing', 'shortness of breath', 'coughing'],
+        treatment: ['Reliever inhalers', 'Preventer inhalers'],
+    },
+	{
+        name:'Bronchitis',
+        symptomes:['Coughing', 'Constant fever', 'Heart failure'],
+        treatment: ['mucolytics', 'amoxicillin', 'pulmonary rehabilitation program'],
+    },
+
+    {
+        name:'Diabetes',
+        symptomes:['Feeling very thirsty', 'Weight loss', 'Cuts or wounds that heal slowly', 'blurred vision'],
+        treatment: ['Insulin', 'Healthy eating', 'Exercises'],
+
+    },
+
+];
+
+let programStart1 = prompt('Welcome to our clinics webpage. Please, enter your username.');
+let programStart2 = +prompt('Now, please enter your password to continue to your personal account.'); 
+let welcome;
+let patientIllness;
+let symptomes;
+let illnessTreatment;
+let prescription;
+
+function authentication (login){
+    for (i=0; i<login.length; i++) {
+        if(login[i].username === programStart1 && login[i].pass === programStart2) {
+            welcome = alert(`Welcome ${programStart1}. Press OK to continue.`);    
+        } 
+    }
+    for (i=0; i<patientInfo.length; i++) {
+        if(patientInfo[i].name === programStart1) {
+            patientIllness = patientInfo[i].illness;
+            symptomes=prompt(`Based on your illness history you have ${patientIllness}. Please, enter what symptomes do you have separated with a comma.`);
+        }
+      }
+
+  return (`Your ilnness is:${patientIllness}+' '+and your syptomes are:+${symptomes}. `);
+}
+
+authentication (login);
+
+
+function symptomesMatch (symptomes) {
+    for (i=0; i<illness.length; i++) {
+        if (illness[i].name === patientIllness) {
+            symptomes = illness[i].symptomes;
+            illnessTreatment = illness[i].treatment;
+            prescription = alert(`Dear  ${programStart1}, you have to take the following treatment: ${illnessTreatment}. Stay healthy.`)
+        }
+    }
+return prescription;
+}
+symptomesMatch (symptomes);
+
+
+
+</script>
