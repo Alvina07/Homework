@@ -115,5 +115,3 @@ number1.addEventListener('click', function(){
     displayAnswer.value=finalResult;
     calculatorHistory.value=calculatorHistoryNew;
     });
-
-    
