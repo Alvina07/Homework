@@ -1,0 +1,56 @@
+div {
+    background-color: rgb(247, 235, 211);
+    width: 500px;
+    border: 2px solid rgb(12, 10, 10);;
+    padding: 0px;
+    margin: 5px 70px 5px 5px;
+    text-align: center;
+  }
+  body {
+    background-image: url('https://cdn.pixabay.com/photo/2019/11/12/05/51/music-note-paper-4620121_960_720.jpg');
+  }
+  .Drum{
+    border-radius: 100%;
+    border: 2px solid rgb(12, 10, 10);
+  }
+    button {
+        display: inside;
+        width: 25%;
+        height: 17%;
+        border: 2px solid rgb(24, 22, 22);
+        background-color: rgb(236, 214, 167);
+        padding: 0;
+        font-size: 17px;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 100%;
+        vertical-align: middle;
+        transform: rotate(20deg);    
+      }
+                     
+    .drumSounds{
+        background-image: url('https://cdn.pixabay.com/photo/2017/01/31/22/58/abstract-2027961_960_720.png');
+        font-family: "Arial Black", Gadget, sans-serif;
+        color: black;
+        font-size: 18 px;
+        padding: 10 px;
+        margin: 10 px;
+        text-align: center;
+        border-radius: 100%;
+        width: 500px;
+        height:410px;
+        
+      }
+    #keyboardSounds {
+        background-color: rgb(235, 228, 208);
+        color: black;
+        border: 2px solid rgb(17, 16, 16);
+        font-size: 20 px;
+        padding: 0 px;
+        text-align: left;
+        width: 500px;
+        margin: 5px
+      }
+      
+  
+ 
