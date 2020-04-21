@@ -1,0 +1,145 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <style>
+            body {
+              background-image: url('https://cdn.pixabay.com/photo/2017/11/04/01/09/classic-2916151_960_720.jpg');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              text-align:center;
+            }
+            form  { display: table;  text-align: center;}
+            p     { display: table-row;  text-align: center;}
+            label { display: table-cell; text-align: center;}
+            input { display: table-cell; text-align: center;}
+            </style>
+        
+        <h3 style="color:white;)">New Car Addition</h3>
+       <form addingCars="/action_page.php"></form>
+       <p>
+        <label for="carName"><b style="color:rgb(236, 242, 245)">Car name:</b></label>
+        <input type="text"  id="carName" ><br><br>
+        <label for="carYear"><b style="color:rgb(236, 242, 245)">Car Year:</b></label>
+        <input type="text"  id="carYear" ><br><br>
+       </p>
+       <p>
+        <label for="driverName"><b style="color:rgb(236, 242, 245)">Driver name:</b></label>
+        <input type="text"  id="driverName" ><br><br>
+        <label for="serviceProvider"><b style="color:rgb(236, 242, 245)">Service Provider:</b></label>
+        <input type="text"  id="serviceProvider" ><br><br>
+
+        <button id="addingCar"><b>Add a New Car</b></button> <br>
+        </p>
+        
+        <script>
+            const cars = [
+    {
+        model: 'MERCEDES BENZ',
+        year: 2020,
+        owner: 0,
+        service: 1,
+    },
+    {
+        model: 'BMW',
+        year: 2015,
+        owner: 1,
+        service: 1,
+    },
+    {
+        model: 'AUDI',
+        year: 2001,
+        owner: 0,
+        service: 0,
+    },
+    {
+        model: 'LEXUS',
+        year: 2000,
+        owner: 2,
+        service: 0,
+    }
+]
+const owner = [
+    {
+        name: 'Armen',
+        index: 0,
+    },
+    {
+        name: 'Narek',
+        index: 1,
+    },
+    {
+        name: 'Hayk',
+        index: 2,
+    }
+]
+const service = [
+    {
+        serviceName: 'Mec Aniv',
+        index: 0,
+    },
+    {
+        serviceName: 'Poqr Aniv',
+        index: 1,
+    },
+];
+
+
+//1. gtnel qani avto e spasarkvum amen service um
+
+//const carService=cars.filter((item)=> {
+    //const eachService=service.filter((element)=>{
+        //if (item.service===element.index) {
+          //  item.service===element.serviceName
+       // }
+    //});
+    //return item;
+//});
+//console.log(carService);
+
+// 2 gtnel Narek i bolor meqenanere
+
+//const narekCars=cars.filter((item)=>{
+    //const ownerNarek=owner.filter((element)=>{
+        //if (item.owner===element.index){
+         //   item.owner===element.name
+       // }
+
+    //});
+   // return item;
+//});
+//console.log(narekCars)
+
+// 3. gtnel 10 tarekanic mec meqenanere
+
+//const oldCars=cars.filter((item)=> item.year<2010 );
+//console.log(oldCars);
+
+
+// 5. bolor meqenaneri taretive poxvela 1 ov;
+
+//const newYear=cars.map((item)=>item.year+=1);
+//console.log(newYear);
+
+
+let carList = [];
+let carName=document.querySelector('#carName');
+let carYear=document.querySelector('#carYear');
+let driverName=document.querySelector('#driverName');
+let serviceProvider=document.querySelector('#serviceProvider');
+let addingCar = document.querySelector('#addingCar');
+
+addingCar.addEventListener ('click', function () {
+    carList.push( {
+        type: carName.value,
+        year: carYear.value,
+        owner: driverName.value,
+        service: serviceProvider.value,
+
+  }); 
+  console.log(carList)
+});
+        </script>
+    </body>
+</html>
